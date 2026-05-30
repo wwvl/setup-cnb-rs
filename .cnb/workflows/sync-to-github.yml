@@ -11,3 +11,4 @@ main:
             username: wwvl
             password: ${GITHUB_SYNC_TOKEN}
             sync_mode: rebase
+            push_tags: true
