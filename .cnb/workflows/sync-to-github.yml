@@ -1,0 +1,13 @@
+main:
+  push:
+    - stages:
+        - name: sync # https://cnb.cool/cnb/plugins/tencentcom/git-sync
+          image: tencentcom/git-sync
+          imports:
+            - https://cnb.cool/prevailna/secrets/-/blob/main/github-sync/setup-cnb-rs.yml
+          settings:
+            target_url: https://github.com/wwvl/setup-cnb-rs.git
+            auth_type: https
+            username: wwvl
+            password: ${GITHUB_SYNC_TOKEN}
+            sync_mode: rebase
