@@ -1,0 +1,75 @@
+# setup-cnb-rs
+
+**简体中文** | [English](./README.en.md)
+
+[![CNB Repo](https://img.shields.io/badge/CNB-wwvo%2Fcnb--rs%2Fsetup--cnb--rs-2F80ED?style=flat-square)](https://cnb.cool/wwvo/cnb-rs/setup-cnb-rs)
+[![License](https://img.shields.io/badge/license-MIT-2F80ED?style=flat-square)](LICENSE)
+
+在 GitHub Actions 中一键安装 [cnb-rs](https://cnb.cool/wwvo/cnb-rs/cnb-rs) CLI 工具。
+
+## 快速开始
+
+```yaml
+steps:
+  - uses: wwvo/setup-cnb-rs@v1
+  - run: cnb-rs --version
+```
+
+## 使用示例
+
+### 指定版本
+
+```yaml
+steps:
+  - uses: wwvo/setup-cnb-rs@v1
+    with:
+      version: v1.0.0-alpha.1
+```
+
+### 完整工作流
+
+```yaml
+name: CNB Automation
+on:
+  push:
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wwvo/setup-cnb-rs@v1
+        with:
+          version: v1.0.0-alpha.1
+
+      - name: 给 Issue 添加评论
+        run: cnb-rs issue comment 1 -b "CI 构建完成"
+        env:
+          CNB_TOKEN: ${{ secrets.CNB_TOKEN }}
+```
+
+## Inputs
+
+| 名称 | 描述 | 必填 | 默认值 |
+|---|---|---|---|
+| `version` | cnb-rs 版本号 | 否 | `v1.0.0-alpha.1` |
+| `source` | 下载源（`cnb` 或 `github`） | 否 | `cnb` |
+
+## Outputs
+
+| 名称 | 描述 |
+|---|---|
+| `version` | 实际安装的版本号 |
+| `bin-path` | cnb-rs 二进制文件所在目录 |
+
+## 支持平台
+
+| Runner | 架构 | 状态 |
+|---|---|---|
+| `ubuntu-latest` | x86_64, arm64 | ✅ |
+| `macos-latest` | x86_64, arm64 | ✅ |
+| `windows-latest` | x86_64, arm64 | ✅ |
+
+## 许可证
+
+[MIT License](LICENSE)
