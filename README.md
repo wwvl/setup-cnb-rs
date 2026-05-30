@@ -2,6 +2,7 @@
 
 **简体中文** | [English](./README.en.md)
 
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-setup--cnb--rs-2F80ED?style=flat-square&logo=github)](https://github.com/marketplace/actions/setup-cnb-rs)
 [![CNB Repo](https://img.shields.io/badge/CNB-wwvo%2Fcnb--rs%2Fsetup--cnb--rs-2F80ED?style=flat-square)](https://cnb.cool/wwvo/cnb-rs/setup-cnb-rs)
 [![License](https://img.shields.io/badge/license-MIT-2F80ED?style=flat-square)](LICENSE)
 
@@ -50,25 +51,25 @@ jobs:
 
 ## Inputs
 
-| 名称 | 描述 | 必填 | 默认值 |
-|---|---|---|---|
-| `version` | cnb-rs 版本号 | 否 | `v1.0.0-alpha.1` |
-| `source` | 下载源（`cnb` 或 `github`） | 否 | `cnb` |
+| 名称      | 描述                        | 必填 | 默认值           |
+| --------- | --------------------------- | ---- | ---------------- |
+| `version` | cnb-rs 版本号               | 否   | `v1.0.0-alpha.1` |
+| `source`  | 下载源（`cnb` 或 `github`） | 否   | `cnb`            |
 
 ## Outputs
 
-| 名称 | 描述 |
-|---|---|
-| `version` | 实际安装的版本号 |
+| 名称       | 描述                      |
+| ---------- | ------------------------- |
+| `version`  | 实际安装的版本号          |
 | `bin-path` | cnb-rs 二进制文件所在目录 |
 
 ## 支持平台
 
-| Runner | 架构 | 状态 |
-|---|---|---|
-| `ubuntu-latest` | x86_64, arm64 | ✅ |
-| `macos-latest` | x86_64, arm64 | ✅ |
-| `windows-latest` | x86_64, arm64 | ✅ |
+| Runner           | 架构          | 状态 |
+| ---------------- | ------------- | ---- |
+| `ubuntu-latest`  | x86_64, arm64 | ✅   |
+| `macos-latest`   | x86_64, arm64 | ✅   |
+| `windows-latest` | x86_64, arm64 | ✅   |
 
 ## 许可证
 

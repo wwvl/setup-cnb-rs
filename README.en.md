@@ -2,6 +2,7 @@
 
 [简体中文](./README.md) | **English**
 
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-setup--cnb--rs-2F80ED?style=flat-square&logo=github)](https://github.com/marketplace/actions/setup-cnb-rs)
 [![CNB Repo](https://img.shields.io/badge/CNB-wwvo%2Fcnb--rs%2Fsetup--cnb--rs-2F80ED?style=flat-square)](https://cnb.cool/wwvo/cnb-rs/setup-cnb-rs)
 [![License](https://img.shields.io/badge/license-MIT-2F80ED?style=flat-square)](LICENSE)
 
@@ -50,25 +51,25 @@ jobs:
 
 ## Inputs
 
-| Name | Description | Required | Default |
-|---|---|---|---|
-| `version` | cnb-rs version to install | No | `v1.0.0-alpha.1` |
-| `source` | Download source (`cnb` or `github`) | No | `cnb` |
+| Name      | Description                         | Required | Default          |
+| --------- | ----------------------------------- | -------- | ---------------- |
+| `version` | cnb-rs version to install           | No       | `v1.0.0-alpha.1` |
+| `source`  | Download source (`cnb` or `github`) | No       | `cnb`            |
 
 ## Outputs
 
-| Name | Description |
-|---|---|
-| `version` | The installed cnb-rs version string |
+| Name       | Description                            |
+| ---------- | -------------------------------------- |
+| `version`  | The installed cnb-rs version string    |
 | `bin-path` | Directory containing the cnb-rs binary |
 
 ## Supported Platforms
 
-| Runner | Architecture | Status |
-|---|---|---|
-| `ubuntu-latest` | x86_64, arm64 | ✅ |
-| `macos-latest` | x86_64, arm64 | ✅ |
-| `windows-latest` | x86_64, arm64 | ✅ |
+| Runner           | Architecture  | Status |
+| ---------------- | ------------- | ------ |
+| `ubuntu-latest`  | x86_64, arm64 | ✅     |
+| `macos-latest`   | x86_64, arm64 | ✅     |
+| `windows-latest` | x86_64, arm64 | ✅     |
 
 ## License
 
