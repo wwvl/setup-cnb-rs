@@ -2,7 +2,7 @@
 
 [简体中文](./README.md) | **English**
 
-[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-setup--cnb--rs-2F80ED?style=flat-square&logo=github)](https://github.com/marketplace/actions/setup-cnb-rs)
+[![GitHub](https://img.shields.io/badge/GitHub-wwvl%2Fsetup--cnb--rs-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/wwvl/setup-cnb-rs)
 [![CNB Repo](https://img.shields.io/badge/CNB-wwvo%2Fcnb--rs%2Fsetup--cnb--rs-2F80ED?style=flat-square)](https://cnb.cool/wwvo/cnb-rs/setup-cnb-rs)
 [![License](https://img.shields.io/badge/license-MIT-2F80ED?style=flat-square)](LICENSE)
 
