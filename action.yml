@@ -1,31 +1,31 @@
-name: 'Setup cnb-rs'
-description: '在 GitHub Actions 中安装 cnb-rs CLI 工具'
-author: 'wwvo'
+name: "Setup cnb-rs"
+description: "在 GitHub Actions 中安装 cnb-rs CLI 工具"
+author: "wwvo"
 
 branding:
-  icon: 'terminal'
-  color: 'blue'
+  icon: "terminal"
+  color: "blue"
 
 inputs:
   version:
-    description: '要安装的 cnb-rs 版本'
+    description: "要安装的 cnb-rs 版本 (例如 v1.0.0-alpha.8, 或 latest 自动获取最新)"
     required: false
-    default: 'v1.0.0-alpha.1'
+    default: "latest"
   source:
-    description: '下载源 (cnb 或 github)'
+    description: "下载源 (cnb 或 github)"
     required: false
-    default: 'cnb'
+    default: "cnb"
 
 outputs:
   version:
-    description: '已安装的 cnb-rs 版本'
+    description: "已安装的 cnb-rs 版本"
     value: ${{ steps.verify.outputs.version }}
   bin-path:
-    description: 'cnb-rs 二进制文件所在目录'
+    description: "cnb-rs 二进制文件所在目录"
     value: ${{ steps.verify.outputs.bin-path }}
 
 runs:
-  using: 'composite'
+  using: "composite"
   steps:
     - name: Install cnb-rs (Linux/macOS)
       if: runner.os != 'Windows'

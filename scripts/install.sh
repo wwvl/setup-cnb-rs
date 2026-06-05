@@ -17,6 +17,16 @@ cnb_repo_slug="wwvo/cnb-rs/cnb-rs"
 github_endpoint="https://github.com"
 github_repo_slug="wwvo/cnb-rs"
 
+# ── Resolve latest version ──────────────────────────────────────
+if [[ "$version" == "latest" ]]; then
+  echo "Resolving latest cnb-rs version..."
+  version="$(curl -fsSL "${cnb_endpoint}/${cnb_repo_slug}/-/git/raw/main/scripts/install.sh" | grep -oP 'default_version="\K[^"]+')" || {
+    echo "::error::Failed to resolve latest cnb-rs version"
+    exit 1
+  }
+  echo "Resolved latest version: ${version}"
+fi
+
 # ── Normalize version ───────────────────────────────────────────
 [[ "$version" == v* ]] || version="v${version}"
 

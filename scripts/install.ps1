@@ -21,6 +21,26 @@ if (-not $BinDir) {
   exit 1
 }
 
+# ── Resolve latest version ────────────────────────────────────────
+if ($Version -eq 'latest') {
+  Write-Host 'Resolving latest cnb-rs version...'
+  $CnbRepoSlug = 'wwvo/cnb-rs/cnb-rs'
+  $RawUrl = "$CnbEndpoint/$CnbRepoSlug/-/git/raw/main/scripts/install.ps1"
+  try {
+    $ScriptContent = (Invoke-WebRequest -Uri $RawUrl -UseBasicParsing).Content
+    if ($ScriptContent -match '\$DefaultVersion\s*=\s*"([^"]+)"') {
+      $Version = $Matches[1]
+      Write-Host "Resolved latest version: $Version"
+    } else {
+      Write-Host '::error::Failed to parse latest version from remote install.ps1'
+      exit 1
+    }
+  } catch {
+    Write-Host "::error::Failed to resolve latest cnb-rs version: $_"
+    exit 1
+  }
+}
+
 # ── Normalize version ───────────────────────────────────────────
 if (-not $Version.StartsWith('v')) {
   $Version = "v$Version"
