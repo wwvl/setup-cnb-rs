@@ -16,8 +16,6 @@ steps:
   - run: cnb-rs --version
 ```
 
-默认安装最新版本（自动从 cnb-rs 主分支解析）。
-
 ## 使用示例
 
 ### 指定版本
@@ -26,7 +24,7 @@ steps:
 steps:
   - uses: wwvl/setup-cnb-rs@main
     with:
-      version: v1.0.0-alpha.8
+      version: v1.0.0-alpha.7
 ```
 
 ### 完整工作流
@@ -51,10 +49,10 @@ jobs:
 
 ## Inputs
 
-| 名称      | 描述                                               | 必填 | 默认值   |
-| --------- | -------------------------------------------------- | ---- | -------- |
-| `version` | cnb-rs 版本号（`latest` 自动获取最新，或指定版本） | 否   | `latest` |
-| `source`  | 下载源（`cnb` 或 `github`）                        | 否   | `cnb`    |
+| 名称      | 描述                        | 必填 | 默认值           |
+| --------- | --------------------------- | ---- | ---------------- |
+| `version` | cnb-rs 版本号               | 否   | `v1.0.0-alpha.7` |
+| `source`  | 下载源（`cnb` 或 `github`） | 否   | `cnb`            |
 
 ## Outputs
 

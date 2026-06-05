@@ -8,9 +8,9 @@ branding:
 
 inputs:
   version:
-    description: "要安装的 cnb-rs 版本 (例如 v1.0.0-alpha.8, 或 latest 自动获取最新)"
+    description: "要安装的 cnb-rs 版本"
     required: false
-    default: "latest"
+    default: "v1.0.0-alpha.7"
   source:
     description: "下载源 (cnb 或 github)"
     required: false

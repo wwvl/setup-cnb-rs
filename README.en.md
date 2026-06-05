@@ -16,8 +16,6 @@ steps:
   - run: cnb-rs --version
 ```
 
-Installs the latest version by default (auto-resolved from cnb-rs main branch).
-
 ## Usage
 
 ### Specify a version
@@ -26,7 +24,7 @@ Installs the latest version by default (auto-resolved from cnb-rs main branch).
 steps:
   - uses: wwvl/setup-cnb-rs@main
     with:
-      version: v1.0.0-alpha.8
+      version: v1.0.0-alpha.7
 ```
 
 ### Full workflow example
@@ -51,10 +49,10 @@ jobs:
 
 ## Inputs
 
-| Name      | Description                                                     | Required | Default  |
-| --------- | --------------------------------------------------------------- | -------- | -------- |
-| `version` | cnb-rs version (`latest` for newest, or a specific version tag) | No       | `latest` |
-| `source`  | Download source (`cnb` or `github`)                             | No       | `cnb`    |
+| Name      | Description                         | Required | Default          |
+| --------- | ----------------------------------- | -------- | ---------------- |
+| `version` | cnb-rs version to install           | No       | `v1.0.0-alpha.7` |
+| `source`  | Download source (`cnb` or `github`) | No       | `cnb`            |
 
 ## Outputs
 
