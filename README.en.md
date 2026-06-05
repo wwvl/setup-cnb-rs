@@ -12,9 +12,11 @@ Install the [cnb-rs](https://cnb.cool/wwvo/cnb-rs/cnb-rs) CLI tool in GitHub Act
 
 ```yaml
 steps:
-  - uses: wwvo/setup-cnb-rs@v1
+  - uses: wwvl/setup-cnb-rs@main
   - run: cnb-rs --version
 ```
+
+Installs the latest version by default (auto-resolved from cnb-rs main branch).
 
 ## Usage
 
@@ -22,9 +24,9 @@ steps:
 
 ```yaml
 steps:
-  - uses: wwvo/setup-cnb-rs@v1
+  - uses: wwvl/setup-cnb-rs@main
     with:
-      version: v1.0.0-alpha.1
+      version: v1.0.0-alpha.8
 ```
 
 ### Full workflow example
@@ -39,9 +41,7 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
-      - uses: wwvo/setup-cnb-rs@v1
-        with:
-          version: v1.0.0-alpha.1
+      - uses: wwvl/setup-cnb-rs@main
 
       - name: Comment on an issue
         run: cnb-rs issue comment 1 -b "CI build completed"
@@ -51,10 +51,10 @@ jobs:
 
 ## Inputs
 
-| Name      | Description                         | Required | Default          |
-| --------- | ----------------------------------- | -------- | ---------------- |
-| `version` | cnb-rs version to install           | No       | `v1.0.0-alpha.1` |
-| `source`  | Download source (`cnb` or `github`) | No       | `cnb`            |
+| Name      | Description                                                     | Required | Default  |
+| --------- | --------------------------------------------------------------- | -------- | -------- |
+| `version` | cnb-rs version (`latest` for newest, or a specific version tag) | No       | `latest` |
+| `source`  | Download source (`cnb` or `github`)                             | No       | `cnb`    |
 
 ## Outputs
 
