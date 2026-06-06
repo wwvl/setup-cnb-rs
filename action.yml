@@ -10,7 +10,7 @@ inputs:
   version:
     description: "要安装的 cnb-rs 版本"
     required: false
-    default: "v1.0.0-alpha.11"
+    default: "v1.0.0-alpha.12"
   source:
     description: "下载源 (cnb 或 github)"
     required: false
