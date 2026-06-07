@@ -26,7 +26,7 @@ steps:
 steps:
   - uses: wwvl/setup-cnb-rs@main
     with:
-      version: v1.0.0-alpha.14
+      version: v1.0.0-alpha.15
 ```
 
 ### 完整工作流
@@ -53,7 +53,7 @@ jobs:
 
 | 名称      | 描述                        | 必填 | 默认值            |
 | --------- | --------------------------- | ---- | ----------------- |
-| `version` | cnb-rs 版本号               | 否   | `v1.0.0-alpha.14` |
+| `version` | cnb-rs 版本号               | 否   | `v1.0.0-alpha.15` |
 | `source`  | 下载源（`cnb` 或 `github`） | 否   | `cnb`             |
 
 ## Outputs
