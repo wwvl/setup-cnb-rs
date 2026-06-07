@@ -2,11 +2,12 @@
 
 **简体中文** | [English](./README.en.md)
 
-[![GitHub](https://img.shields.io/badge/GitHub-wwvl%2Fsetup--cnb--rs-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/wwvl/setup-cnb-rs)
-[![CNB Repo](https://img.shields.io/badge/CNB-wwvo%2Fcnb--rs%2Fsetup--cnb--rs-2F80ED?style=flat-square)](https://cnb.cool/wwvo/cnb-rs/setup-cnb-rs)
-[![License](https://img.shields.io/badge/license-MIT-2F80ED?style=flat-square)](LICENSE)
+[![Release][badge-release]][cnb-releases]
+[![GitHub][badge-github]][github-repo]
+[![CNB Repo][badge-cnb]][cnb-repo]
+[![License][badge-license]][license]
 
-在 GitHub Actions 中一键安装 [cnb-rs](https://cnb.cool/wwvo/cnb-rs/cnb-rs) CLI 工具。
+在 GitHub Actions 中一键安装 [cnb-rs][cnb-rs-repo] CLI 工具。
 
 ## 快速开始
 
@@ -49,10 +50,10 @@ jobs:
 
 ## Inputs
 
-| 名称      | 描述                        | 必填 | 默认值           |
-| --------- | --------------------------- | ---- | ---------------- |
+| 名称      | 描述                        | 必填 | 默认值            |
+| --------- | --------------------------- | ---- | ----------------- |
 | `version` | cnb-rs 版本号               | 否   | `v1.0.0-alpha.13` |
-| `source`  | 下载源（`cnb` 或 `github`） | 否   | `cnb`            |
+| `source`  | 下载源（`cnb` 或 `github`） | 否   | `cnb`             |
 
 ## Outputs
 
@@ -71,4 +72,19 @@ jobs:
 
 ## 许可证
 
-[MIT License](LICENSE)
+[MIT License][license]
+
+<!-- badges -->
+
+[badge-release]: https://cnb.cool/wwvo/cnb-rs/cnb-rs/-/badge/release
+[badge-github]: https://img.shields.io/badge/GitHub-wwvl%2Fsetup--cnb--rs-181717?style=flat-square&logo=github&logoColor=white
+[badge-cnb]: https://img.shields.io/badge/CNB-wwvo%2Fcnb--rs%2Fsetup--cnb--rs-2F80ED?style=flat-square
+[badge-license]: https://img.shields.io/badge/license-MIT-2F80ED?style=flat-square
+
+<!-- links -->
+
+[cnb-releases]: https://cnb.cool/wwvo/cnb-rs/cnb-rs/-/releases
+[github-repo]: https://github.com/wwvl/setup-cnb-rs
+[cnb-repo]: https://cnb.cool/wwvo/cnb-rs/setup-cnb-rs
+[cnb-rs-repo]: https://cnb.cool/wwvo/cnb-rs/cnb-rs
+[license]: LICENSE

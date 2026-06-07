@@ -2,11 +2,12 @@
 
 [简体中文](./README.md) | **English**
 
-[![GitHub](https://img.shields.io/badge/GitHub-wwvl%2Fsetup--cnb--rs-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/wwvl/setup-cnb-rs)
-[![CNB Repo](https://img.shields.io/badge/CNB-wwvo%2Fcnb--rs%2Fsetup--cnb--rs-2F80ED?style=flat-square)](https://cnb.cool/wwvo/cnb-rs/setup-cnb-rs)
-[![License](https://img.shields.io/badge/license-MIT-2F80ED?style=flat-square)](LICENSE)
+[![Release][badge-release]][cnb-releases]
+[![GitHub][badge-github]][github-repo]
+[![CNB Repo][badge-cnb]][cnb-repo]
+[![License][badge-license]][license]
 
-Install the [cnb-rs](https://cnb.cool/wwvo/cnb-rs/cnb-rs) CLI tool in GitHub Actions with a single step.
+Install the [cnb-rs][cnb-rs-repo] CLI tool in GitHub Actions with a single step.
 
 ## Quick Start
 
@@ -49,10 +50,10 @@ jobs:
 
 ## Inputs
 
-| Name      | Description                         | Required | Default          |
-| --------- | ----------------------------------- | -------- | ---------------- |
+| Name      | Description                         | Required | Default           |
+| --------- | ----------------------------------- | -------- | ----------------- |
 | `version` | cnb-rs version to install           | No       | `v1.0.0-alpha.13` |
-| `source`  | Download source (`cnb` or `github`) | No       | `cnb`            |
+| `source`  | Download source (`cnb` or `github`) | No       | `cnb`             |
 
 ## Outputs
 
@@ -71,4 +72,19 @@ jobs:
 
 ## License
 
-[MIT License](LICENSE)
+[MIT License][license]
+
+<!-- badges -->
+
+[badge-release]: https://cnb.cool/wwvo/cnb-rs/cnb-rs/-/badge/release
+[badge-github]: https://img.shields.io/badge/GitHub-wwvl%2Fsetup--cnb--rs-181717?style=flat-square&logo=github&logoColor=white
+[badge-cnb]: https://img.shields.io/badge/CNB-wwvo%2Fcnb--rs%2Fsetup--cnb--rs-2F80ED?style=flat-square
+[badge-license]: https://img.shields.io/badge/license-MIT-2F80ED?style=flat-square
+
+<!-- links -->
+
+[cnb-releases]: https://cnb.cool/wwvo/cnb-rs/cnb-rs/-/releases
+[github-repo]: https://github.com/wwvl/setup-cnb-rs
+[cnb-repo]: https://cnb.cool/wwvo/cnb-rs/setup-cnb-rs
+[cnb-rs-repo]: https://cnb.cool/wwvo/cnb-rs/cnb-rs
+[license]: LICENSE
