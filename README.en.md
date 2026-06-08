@@ -26,7 +26,7 @@ steps:
 steps:
   - uses: wwvl/setup-cnb-rs@main
     with:
-      version: v1.0.0-beta.5
+      version: v1.0.0-beta.6
 ```
 
 ### Full workflow example
@@ -53,7 +53,7 @@ jobs:
 
 | Name      | Description                         | Required | Default           |
 | --------- | ----------------------------------- | -------- | ----------------- |
-| `version` | cnb-rs version to install           | No       | `v1.0.0-beta.5` |
+| `version` | cnb-rs version to install           | No       | `v1.0.0-beta.6` |
 | `source`  | Download source (`cnb` or `github`) | No       | `cnb`             |
 
 ## Outputs
